@@ -1,0 +1,130 @@
+// Styles
+html {
+    // Explanation: the default font size in most browsers is 16px.
+    // This will set 1rem = 10px, while not abusing users that use accessibility 
+    // features. We only use px here. The rest of the site is in rem.
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body {
+    flex: 1;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    max-width: 80rem;
+}
+
+// Typography
+// The following define a typographic scale optimized for
+// Helvetica at a browser default size of 16px, where 1 rem = 10px. 
+//
+// Sizes:
+$z1: 4.2rem;
+$z2: 3.3rem;
+$z3: 2.6rem;
+$z4: 2.0rem;
+$z5: 1.6rem;
+$z6: 1.3rem;
+// Line Heights:
+$h1: 6.5rem;
+$h2: 5.2rem;
+$h3: 4.2rem;
+$h4: 3.3rem;
+$h5: 2.8rem;
+$h6: 2.3rem;
+// Spacing Units:
+$s1: 4.5rem;
+$s2: 2.8rem;
+$s3: 1.7rem;
+$s4: 1.1rem;
+$s5: 0.7rem;
+$s6: 0.4rem;
+body {
+    font-size: $z5;
+}
+
+p,
+a {
+    font-size: $z5;
+    line-height: $h5;
+    margin-bottom: 0;
+    margin-top: $s5;
+}
+
+h1 {
+    font-size: $z1;
+    line-height: $h1;
+    margin-top: 0;
+    margin-bottom: $s1;
+}
+
+h2 {
+    font-size: $z2;
+    line-height: $h2;
+    margin-top: 0;
+    margin-bottom: $s2;
+}
+
+h3 {
+    font-size: $z3;
+    line-height: $h3;
+    margin-top: 0;
+    margin-bottom: $s3;
+}
+
+h4 {
+    font-size: $z4;
+    line-height: $h4;
+    margin-top: 0;
+    margin-bottom: $s4;
+}
+
+h5 {
+    font-size: $z5;
+    line-height: $h5;
+    margin-top: 0;
+    margin-bottom: $s5;
+}
+
+h6 {
+    font-size: $z6;
+    line-height: $h6;
+    margin-top: 0;
+    margin-bottom: $s6;
+}
+
+// Layout
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    // border-bottom: 1px solid black;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    article {
+        order: 1;
+        section {
+            margin-bottom: $s2;
+            &.introduction {
+                color: #333;
+                font-style: italic;
+            }
+        }
+    }
+    nav {
+        flex: 0 0 16rem;
+        order: 0;
+        // border-left: 1px solid black;
+        padding-left: $s5;
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    }
+}

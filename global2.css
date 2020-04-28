@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body > * {
+  padding: 16px;
+}
+
+body{height:100%;
+   width:100%;
+   background-color:#ffffff;/*your background image*/  
+   /*background-image:url(../images/name.jpg); this is your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;/*this sets the image to fullscreen covering the whole screen*/  
+   /*css hack for ie*/     
+   /*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.akropolis.jpg',sizingMethod='scale');
+   -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='akropolis.jpg',sizingMethod='scale')";*/
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(#FFF);
+  background-color: #ffd700;
+}
+
+
+header img {
+  width: 64px;
+  height: 64px;
+  vertical-align: bottom;
+}
+
+header h1 {
+  font-size: 24px;
+  font-family: 'Times New Roman';
+  color: #FFF;
+  text-shadow: 0 3px #000;
+  letter-spacing: 1px;
+}
+
+hr {
+    height: 2px;
+    color: #800000;
+    background-color: #800000;
+    border: none;
+}
+
+nav {
+  text-align: center;
+  background: #333;
+}
+
+nav a {
+  font: bold 12px Verdana;
+  color: #FFF;
+  padding: 6px 9px;
+  text-decoration: none;
+  outline: 0;
+}
+
+nav a:not(:last-child) {
+  margin-right: 18px;
+}
+
+nav a:hover,
+nav a:focus,
+#current {
+  border-bottom: 2px solid;
+}
+
+main {
+  font: 13px Times New Roman;
+  color: #333;
+}
+
+main a {
+  color: inherit;
+}
+
+footer {
+  text-align: "center";
+  display: flex;
+  align-items: center;
+  background: #333;
+}
+
+
+footer img {
+  text-align: "center";
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span {
+  font: 16px Arial;
+  color: #FFF;
+}
+
+span a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes slideInFromLeftHeader {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+header {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 slideInFromLeftHeader;
+  
+  background: #ffd700;
+  padding: 20px;
+}
+
+@keyframes slideInFromLeftTableB {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#tableB {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideInFromLeftTableB;
+  
+  background: #008080;
+  padding: 20px;
+}
+
