@@ -43,13 +43,22 @@
 </tr>
 
 </table>
-
-<tr>
-<td colspan="2" align="justify" valign="top"> <hr>
-<a href="https://htmlpreview.github.io/?https://github.com/Petros89/Website/blob/master/resume.html"><embed src="PA_Resume.pdf" type="application/pdf"   height="1200px" width="100%"></a> 
-<a href="PA_Resume.pdf" tabindex="-1" height="1200px%" width="100%"><strong>Full-Screen</strong></a>
-</td>
-</tr>
+<script type="text/javascript">
+    document.addEventListener("adobe_dc_view_sdk.ready", function () {
+        var adobeDCView = new AdobeDC.View({
+            clientId: "<<YOUR_CLIENT_ID>>",
+            divId: "adobe-dc-view"
+        });
+        adobeDCView.previewFile({
+            content: { location: { url: "https://github.com/Petros89/Website/blob/master/A.Petros_CV.pdf" } },
+            metaData: { fileName: "<<A.Petros_CV>>" }
+        }, {
+            embedMode: "IN_LINE",
+            showDownloadPDF: false,
+            showPrintPDF: false
+        });
+    });
+</script>
 
 </body>
 
