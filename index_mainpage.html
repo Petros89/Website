@@ -102,6 +102,38 @@ Some of my current research projects and interests are listed below:
 </tr>
 <tr>
 <td style="width:50%" align="justify" valign="top">
+One of the greatest challenges in large-scale numerical analysis is the availability of computer memory for
+solving the linear system of equations. Like in large-scale finite element simulations, where
+the size of the system matrix assembly becomes very large, the FEA solver requires huge
+amounts of computational time and memory that very often exceed the actual memory limits
+of the available hardware resources. To overcome this problem, a GPU-enabled matrix-free 
+conjugate gradient (MFCG) method is imlemented to finite element computations which
+avoids the global matrix assembly. The main difference of the MFCG to the classical conjugate gradient (CG)
+solver lies on the implementation of the matrix-vector product operation.
+Matrix-vector operation found to be the most expensive process consuming more than 80%
+out of the total computations for the numerical solution and thus a matrix-free matrix-vector
+(MFMV) approach becomes beneficial for saving memory and computational time throughout the execution of the FEA.
+A performance analysis on a TITAN V GPU between the parallel MFCG and NVIDIA Amgx matrix-assembly solver
+shows that the MFCG solver is 2.12 × times faster consuming 7.76 × times less memory.
+The parallel MFCG GPU solver achieves a maximum of 81.81 × speed-up allowing for the acceleration of the numerical solution
+for mesh sizes up to 166.375M elements within a single 12GB RAM GPU using double-precision arithmetic. Next research goal is
+the implementation of a hybrid scheme combining MPI and CUDA streaming for ultra-scale computations on
+GPU enabled-clusters and supercomputers.
+	
+<h3><a href="https://news.developer.nvidia.com/nvidia-offers-covid-19-researchers-free-access-to-parabricks/">NVIDIA Offers COVID-19 Researchers Free Access to Parabricks</a></h3>
+<br><br>
+</td>
+<td style="width:50%" align="center" valign="top">
+<a href="https://htmlpreview.github.io/?https://github.com/Petros89/Website/blob/master/index_mainpage.html"><img src="Parabricks_Covid19.png" alt="petros"></a>
+<br> <br>
+</td>
+</tr>
+</tr>
+	
+	
+	
+<tr>
+<td style="width:50%" align="justify" valign="top">
 Researchers are sequencing both the novel coronavirus and the genomes of people afflicted with COVID-19 to understand, 
 among other things, the spread of the disease and who is most affected. But analyzing genomic sequences takes time and
 computing muscle.Based on the well-known Genome Analysis Toolkit, Parabricks uses GPUs to accelerate by as much as
@@ -115,6 +147,9 @@ computing muscle.Based on the well-known Genome Analysis Toolkit, Parabricks use
 </td>
 </tr>
 </tr>
+	
+	
+	
 <tr>
 <td style="width:50%" align="justify" valign="top">
 Large-Eddy Simulation (LES) is a promising technique to model unsteady phenomenoa found in practical applications of turbulent flows. For example, in Internal Combustion Engines (ICE), LES can predict cycle-to-cycle variations in intake flow and combustion, a key for development of advanced engines. My research goal is to perform uncertainty quantified LES for practical applications.  
@@ -145,19 +180,7 @@ flow configuration of the measurement device (dilution sampler) itself. We have 
 <br> 
 </td>
 </tr>
-<tr>
-<td style="width:50%" align="justify" valign="top">
-Motor vehicles are well known as sources of ambient air pollutants. Exposure to many of these pollutants has both acute
-and chronic deleterious health effects. Most exposure to traffic-related pollution occurs in the near-roadway environment.
-Thus better quantification of concentration of  pollutants near roadways is of great societal concern. Understanding the
-turbulent transport and physico-chemical evolution of vehicle-related pollutants can prove beneficial for maintaining
-sufficient levels of heathcare in construction and transportation activities.
-</td>
-<td style="width:50%" align="center" valign="top">
-<a href="https://htmlpreview.github.io/?https://github.com/Petros89/Website/blob/master/index_mainpage.html"><img src="aerosol_2.gif" width="100%" alt="aerosol_2">Pollutant Emmisions</a> 
-<br> <br>
-</td>
-</tr>
+
 
 </table>
 
